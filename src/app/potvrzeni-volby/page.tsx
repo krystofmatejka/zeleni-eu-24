@@ -1,14 +1,13 @@
-"use client";
 import Link from 'next/link'
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 
-export default function Index() {
+export default function PotvrzeniVolby() {
     return (
         <div className={styles.page}>
-            <h1>Úvod</h1>
+            <h1>Potvrzení volby</h1>
             <ul>
                 <li><Link href="/rekni-nam-co-je-pro-tebe-dulezite">Řekni nám co je pro tebe důležité</Link></li>
-                <li><Link href="/potvrzeni-volby">Potvrzení volby</Link></li>
+                <li><Link href="/">Úvod</Link></li>
             </ul>
         </div>
     )
