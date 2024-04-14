@@ -16,11 +16,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log('layout')
   return (
-    <html lang="en">
-      <body className={inter.className} style={{margin: '0'}}>
+
         {children}
-      </body>
-    </html>
+
   );
 }
