@@ -1,21 +1,27 @@
-"use client"
+"use client";
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation'
 
 const variants = {
-  in: {
-    opacity: 1,
-    y: 0,
+  init: {
+    y: '0%',
     transition: {
-      duration: 0.75,
-      delay: 0.5
+      duration: 0
+    }
+  },
+  in: {
+    //opacity: 1,
+    y: ['-100%', '0%'],
+    transition: {
+      duration: 0.5,
+      //delay: 0.5
     }
   },
     out: {
-      opacity: 0,
-      y: 40,
+      //opacity: 0,
+      y: ['0%', '100%'],
       transition: {
-        duration: 0.75
+        duration: 0.5
       }
     }
   };
@@ -33,18 +39,16 @@ export const Transition = ({ children }: { children: React.ReactNode }) => {
                     //initial={{ opacity: 0, y: 100 }}
                     //animate={{ y: '-100%' }}
                     //exit={{ y: '100%' }}
-                    //initial= {{ opacity: 1, y: '0%' }}// Old page starts off invisible and moves down
-                    //animate={{ opacity: 1, y: ['-100%', '0%',] }}    // New page becomes visible and starts from the top
-                    //exit={{ opacity: 1, y: '100%' }}
-                    variants={variants}
-  animate="in"
-  initial="out"
-  exit="out"
+                    initial= {{ opacity: 1, y: '0%' }}// Old page starts off invisible and moves down
+                    animate={{ opacity: 1, y: ['-100%', '0%',] }}    // New page becomes visible and starts from the top
+                    exit={{ opacity: 0, y: '100%' }}
+                    //variants={variants}
+                    //animate="in"
+                    //initial="init"
+                    //exit="out"
                     transition={{
-                      //type: "linear",
-                      //stiffness: 260,
-                      //damping: 20,
-                      duration: 0.5,
+                      type: "linear",
+                      duration: 0.3,
                     }}
                     style={{height: '100%'}}
                 >
