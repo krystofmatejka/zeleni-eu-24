@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout'
 
 export default function PodekovaniNaKonec() {
     const [score, setScore] = useState<number | undefined>()
@@ -19,11 +19,11 @@ export default function PodekovaniNaKonec() {
     }
 
     return (
-        <div>
+        <Layout>
             <h1>Děkujeme</h1>
             <p>
                 Vaše aktivita mohla oslovit {score} potencionálních voličů.
             </p>
-        </div>
+        </Layout>
     )
 }

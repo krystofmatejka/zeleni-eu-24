@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout';
 
 export default function ZustanmeVKontaktu() {
     const router = useRouter()
@@ -25,7 +25,7 @@ export default function ZustanmeVKontaktu() {
     }, [phone])
 
     return (
-        <div>
+        <Layout>
             <h1>Zůstaňme v kontaktu</h1>
             <p>
                 <label>
@@ -57,6 +57,6 @@ export default function ZustanmeVKontaktu() {
                 <button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</button>
                 <button onClick={() => router.push('/darujte')}>Nyní ne</button>
             </p>
-        </div>
+        </Layout>
     )
 }

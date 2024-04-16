@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout';
 
 function handleChangeValue(newValue: number, callback: Function) {
     const newValueLimit = Math.max(newValue, 0)
@@ -18,7 +18,7 @@ export default function KolikaLidemJsteToPoslali() {
     }, [])
 
     return (
-        <div>
+        <Layout>
             <h1>Kolika lidem jste to poslali?</h1>
             <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
             <p>
@@ -27,6 +27,6 @@ export default function KolikaLidemJsteToPoslali() {
                 <button style={{width: '50px'}} onClick={() => handleChangeValue(value - 1, setValue)}>-</button>
                 <Link href='/pripomente-mi-volby'><button>Další krok</button></Link>
             </p>
-        </div>
+        </Layout>
     )
 }

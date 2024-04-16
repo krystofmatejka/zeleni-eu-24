@@ -1,13 +1,13 @@
 import Link from 'next/link'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout'
 
 export default function DikyBudemeVKontaktu() {
     return (
-        <div>
+        <Layout>
             <h1>Díky, budeme v kontaktu</h1>
             <p>
                 <Link href='/darujte'><button>Jdeme dál</button></Link>
             </p>
-        </div>
+        </Layout>
     )
 }

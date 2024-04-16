@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from "./index.module.css";
+import { Layout } from '@/layout';
 
 const SECONDS_IN_DAY = 86400
 const ELECTION_DATE = '2024-06-07T00:00:00.000'
@@ -11,9 +11,11 @@ export default function Index() {
     const title = numberOfWeeksToElection >= 2 ? `${numberOfWeeksToElection} týdnů` : `${numberOfDaysToElection} dnů`
 
     return (
-        <div className={styles.page}>
-            <h1>Do voleb zbývá {title}</h1>
-            <Link href="/rekni-nam-co-je-pro-tebe-dulezite"><button>Jdeme na to</button></Link>
-        </div>
+        <Layout leftBackgroundColor='greenyellow'>
+            <>
+                <h1>Do voleb zbývá {title}</h1>
+                <Link href="/rekni-nam-co-je-pro-tebe-dulezite"><button>Jdeme na to</button></Link>
+            </>
+        </Layout>
     )
 }

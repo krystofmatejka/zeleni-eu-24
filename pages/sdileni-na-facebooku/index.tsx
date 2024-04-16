@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Layout } from '@/layout'
 
 function handleClick(callback: Function) {
     localStorage.setItem('shared', '1')
@@ -17,7 +18,7 @@ export default function SdileniNaFacebooku() {
       }, [])
 
     return (
-        <div>
+        <Layout>
             <h1>Sdílení na facebooku</h1>
             <p>
                 <button><a
@@ -29,6 +30,6 @@ export default function SdileniNaFacebooku() {
                 
                 <Link href='/poslete-zpravu-kamaradum'><button>Nyní ne</button></Link>
                 </p>
-        </div>
+        </Layout>
     )
 }

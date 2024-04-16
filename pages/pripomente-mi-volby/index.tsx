@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout'
 
 export default function PripomenteMiVolby() {
     const router = useRouter()
@@ -17,7 +17,7 @@ export default function PripomenteMiVolby() {
     }, [phone])
 
     return (
-        <div>
+        <Layout>
             <h1>Připomeňte mi volby</h1>
             <p>
                 <label>
@@ -35,6 +35,6 @@ export default function PripomenteMiVolby() {
                 <button onClick={() => router.push('/podekovani')}>Odeslat</button>
                 <button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</button>
             </p>
-        </div>
+        </Layout>
     )
 }
