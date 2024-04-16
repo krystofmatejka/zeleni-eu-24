@@ -7,10 +7,10 @@ export default function PodekovaniNaKonec() {
 
     useEffect(() => {
         const shared = parseInt(localStorage.getItem('shared') ?? '0')
-        // selfie
+        const selfie = parseInt(localStorage.getItem('selfie') ?? '1')
         const numberOfMessages = parseInt(localStorage.getItem('messages') ?? '0')
 
-        const score = shared * 17 + numberOfMessages
+        const score = (shared * 17) + (selfie * 12) + numberOfMessages
         setScore(score)
     }, [])
 
