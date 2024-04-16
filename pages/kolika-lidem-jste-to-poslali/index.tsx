@@ -21,12 +21,14 @@ export default function KolikaLidemJsteToPoslali() {
         <Layout>
             <h1>Kolika lidem jste to poslali?</h1>
             <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
-            <p>
+            <div>
                 <input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
                 <button style={{width: '50px'}} onClick={() => handleChangeValue(value + 1, setValue)}>+</button>
                 <button style={{width: '50px'}} onClick={() => handleChangeValue(value - 1, setValue)}>-</button>
+            </div>
+            <div>
                 <Link href='/pripomente-mi-volby'><button>Další krok</button></Link>
-            </p>
+            </div>
         </Layout>
     )
 }
