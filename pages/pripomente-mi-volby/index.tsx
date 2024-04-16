@@ -19,6 +19,7 @@ export default function PripomenteMiVolby() {
     return (
         <Layout>
             <h1>Připomeňte mi volby</h1>
+            <p>V den volbi postněne volební selfie</p>
             <div className={styles.container}>
                 <label>
                     E-mail
@@ -33,7 +34,10 @@ export default function PripomenteMiVolby() {
                     <input type='checkbox'/>
                 </label>
                 <div>
-                    <button onClick={() => router.push('/podekovani')}>Odeslat</button>
+                    <button onClick={() => {
+                        localStorage.setItem('selfie', '1')
+                        router.push('/podekovani')
+                    }}>Odeslat</button>
                     <button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</button>
                 </div>
             </div>
