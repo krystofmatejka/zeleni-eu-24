@@ -11,7 +11,7 @@ export default function Index() {
     const title = numberOfWeeksToElection >= 2 ? `${numberOfWeeksToElection} týdnů` : `${numberOfDaysToElection} dnů`
 
     return (
-        <Layout leftBackgroundColor='greenyellow'>
+        <Layout leftBackground={{ type: 'image', value: '/johanna_nejedlova.png' }}>
             <>
                 <h1>Do voleb zbývá {title}</h1>
                 <Link href="/rekni-nam-co-je-pro-tebe-dulezite"><button>Jdeme na to</button></Link>

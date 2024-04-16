@@ -7,6 +7,9 @@
 .leftBox {
     width: 50%;
     height: 100%;
+    /*background-image: url(/johanna_nejedlova.png);*/
+    background-size: cover;
+    background-position: center;
 }
 
 .rightBox {
@@ -16,4 +19,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    background: #fff;
 }

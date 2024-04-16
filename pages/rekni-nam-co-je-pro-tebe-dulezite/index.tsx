@@ -15,7 +15,7 @@ export default function RekniNamCoJeProTebeDulezite() {
     const router = useRouter()
 
     return (
-        <Layout leftBackgroundColor='greenyellow'>
+        <Layout leftBackground={{ type: 'image', value: '/petr_doubravsky.png' }}>
             <>
                 <h1>Řekni nám co je pro tebe důležité</h1>
                 <ul>

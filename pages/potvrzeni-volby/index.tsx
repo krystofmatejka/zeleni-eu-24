@@ -15,7 +15,7 @@ export default function PotvrzeniVolby() {
     }
 
     return (
-        <Layout>
+        <Layout leftBackground={{ type: 'image', value: '/johanna_nejedlova.png' }}>
             <>
                 <h1>Vaše téma je: {topic}</h1>
                 <p>Nyní pošťouchněte své přátele, aby se také přišli k volbám a hlasovali</p>

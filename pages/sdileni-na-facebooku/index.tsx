@@ -18,7 +18,7 @@ export default function SdileniNaFacebooku() {
       }, [])
 
     return (
-        <Layout>
+        <Layout leftBackground={{ type: 'image', value: '/petr_doubravsky.png' }}>
             <h1>Sdílení na facebooku</h1>
             <p>
                 <button><a
