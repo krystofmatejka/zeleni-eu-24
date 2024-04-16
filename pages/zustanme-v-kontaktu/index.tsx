@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout';
+import styles from './index.module.css'
 
 export default function ZustanmeVKontaktu() {
     const router = useRouter()
@@ -25,9 +25,9 @@ export default function ZustanmeVKontaktu() {
     }, [phone])
 
     return (
-        <div>
+        <Layout>
             <h1>Zůstaňme v kontaktu</h1>
-            <p>
+            <div className={styles.container}>
                 <label>
                     Jméno
                     <input type='text'/>
@@ -52,11 +52,11 @@ export default function ZustanmeVKontaktu() {
                     Souhlasím se zasíláním informací
                     <input type='checkbox'/>
                 </label>
-            </p>
-            <p>
-                <button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</button>
-                <button onClick={() => router.push('/darujte')}>Nyní ne</button>
-            </p>
-        </div>
+                <div>
+                    <button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</button>
+                    <button onClick={() => router.push('/darujte')}>Nyní ne</button>
+                </div>
+            </div>
+        </Layout>
     )
 }

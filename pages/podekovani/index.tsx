@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout'
 
 export default function Podekovani() {
     const [topic, setTopic] = useState('')
@@ -15,12 +15,12 @@ export default function Podekovani() {
     }
 
     return (
-        <div>
+        <Layout>
             <h1>Děkujeme za sdílení</h1>
             {topic && <p>Vaše téma je {topic}</p>}
             <p>
                 <Link href='/zustanme-v-kontaktu'><button>Další krok</button></Link>
             </p>
-        </div>
+        </Layout>
     )
 }

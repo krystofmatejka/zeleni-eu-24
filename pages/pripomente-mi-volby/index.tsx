@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
-//import styles from "./styles.module.css";
+import { Layout } from '@/layout'
+import styles from './index.module.css'
 
 export default function PripomenteMiVolby() {
     const router = useRouter()
@@ -17,9 +17,9 @@ export default function PripomenteMiVolby() {
     }, [phone])
 
     return (
-        <div>
+        <Layout>
             <h1>Připomeňte mi volby</h1>
-            <p>
+            <div className={styles.container}>
                 <label>
                     E-mail
                     <input type='email' value={email} onChange={e => setEmail(e.target.value)}/>
@@ -32,9 +32,11 @@ export default function PripomenteMiVolby() {
                     Souhlasím s GDPR
                     <input type='checkbox'/>
                 </label>
-                <button onClick={() => router.push('/podekovani')}>Odeslat</button>
-                <button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</button>
-            </p>
-        </div>
+                <div>
+                    <button onClick={() => router.push('/podekovani')}>Odeslat</button>
+                    <button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</button>
+                </div>
+            </div>
+        </Layout>
     )
 }
