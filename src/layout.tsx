@@ -1,26 +1,28 @@
 import styles from './layout.module.css'
 
-type Background = { type: 'color', value: string } | { type: 'image', value: string }
+type LeftBox = {
+    image: string
+    title: string
+    text: string
+}
 
 type Props = {
-    leftBackground?: Background
+    leftbox?: LeftBox
     children: React.ReactNode
 }
 
-const pickBackground = (background?: Background) => {
-    switch (background?.type) {
-        case 'image': return { backgroundImage: `url('${background.value}')` }
-        case 'color': return { backgroundColor: background.value }
-        default: return { backgroundColor: '#01704B' }
-    }
-}
-
-export const Layout = ({ leftBackground, children }: Props) => {
-    const leftBoxBackground = pickBackground(leftBackground)
-
+export const Layout = ({ leftbox, children }: Props) => {
     return (
         <div className={styles.container}>
-            <div className={styles.leftBox} style={{...leftBoxBackground}}></div>
+            {leftbox ? (
+                <div className={styles.leftBox}>
+                    <div className={styles.portrait} style={{backgroundImage: `url('${leftbox.image}')`}}/>
+                    <h2>{leftbox.title}</h2>
+                    <p>{leftbox.text}</p>
+                </div>
+            ) : (
+                <div className={styles.leftBox}/>
+            )}
             <div className={styles.rightBox}>
                 {children}
             </div>

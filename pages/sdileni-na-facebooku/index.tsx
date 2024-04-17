@@ -18,7 +18,13 @@ export default function SdileniNaFacebooku() {
       }, [])
 
     return (
-        <Layout leftBackground={{ type: 'image', value: '/petr_doubravsky.png' }}>
+        <Layout
+            leftbox={{
+                image: '/petr_doubravsky.png',
+                title: 'Petr Doubravský',
+                text: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+            }}
+        >
             <h1>Sdílení na facebooku</h1>
             <p>
                 <button><a

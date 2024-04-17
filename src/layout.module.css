@@ -4,12 +4,33 @@
     display: flex;
 }
 
+.portrait {
+    width: 150px;
+    height: 150px;
+    background-image: url(/johanna_nejedlova.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 .leftBox {
     width: 50%;
     height: 100%;
-    /*background-image: url(/johanna_nejedlova.png);*/
     background-size: cover;
     background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #ddd;
+}
+
+.leftBox > h2 {
+    margin: 10px 0 5px 0;
 }
 
 .rightBox {
@@ -21,4 +42,6 @@
     text-align: center;
 
     background: #fff;
+    margin: 15px;
+    border-radius: 10px;
 }

@@ -11,7 +11,7 @@ const lato = Lato({
 })
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-    console.log('app', styles, lato)
+    console.log('app', styles)
     return (
         <>
         <style jsx global>
