@@ -4,7 +4,7 @@ import { Transition } from "../src/transition"
 import styles from "./styles.css";
 
 const lato = Lato({
-  weight: ['300', '700'],
+  weight: ['100', '300', '400', '700', '900'],
   subsets: ['latin', 'latin-ext'],
   variable: '--font-lato',
   display: 'swap',
