@@ -5,7 +5,7 @@ import styles from "./styles.css";
 
 const lato = Lato({
   weight: ['300', '700'],
-  subsets: ['latin-ext'],
+  subsets: ['latin', 'latin-ext'],
   variable: '--font-lato',
   display: 'swap',
 })
