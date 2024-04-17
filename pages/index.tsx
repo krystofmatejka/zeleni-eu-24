@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Layout } from '@/layout';
 import { Button } from '@/form';
+import styles from './index.module.css'
 
 const SECONDS_IN_DAY = 86400
 const ELECTION_DATE = '2024-06-07T00:00:00.000'

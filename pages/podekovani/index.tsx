@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Layout } from '@/layout'
+import { Button } from '@/form'
 
 export default function Podekovani() {
     const [topic, setTopic] = useState('')
@@ -17,9 +18,9 @@ export default function Podekovani() {
     return (
         <Layout>
             <h1>Děkujeme za sdílení</h1>
-            {topic && <p>Vaše téma je {topic}</p>}
+            {topic && <p className='lastParagraph'>Vaše téma je {topic}</p>}
             <p>
-                <Link href='/zustanme-v-kontaktu'><button>Další krok</button></Link>
+                <Link href='/zustanme-v-kontaktu'><Button>Další krok</Button></Link>
             </p>
         </Layout>
     )

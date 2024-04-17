@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Layout } from '@/layout'
+import { Button } from '@/form'
 
 function handleClick(callback: Function) {
     localStorage.setItem('shared', '1')
@@ -26,15 +27,18 @@ export default function SdileniNaFacebooku() {
             }}
         >
             <h1>Sdílení na facebooku</h1>
-            <p>
-                <button><a
+            <p className='multipleHorizontalButtons'>
+                <a
                     target='_blank'
                     href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvolby.zeleni.cz%2F&amp;src=sdkpreparse'
                     onClick={() => handleClick(() => router.push('/podekovani-za-sdileni'))}
-                >Sdílet na facebooku</a>
-                </button>
+                >
+                    <Button>
+                        Sdílet na facebooku
+                    </Button>
+                </a>
                 
-                <Link href='/poslete-zpravu-kamaradum'><button>Nyní ne</button></Link>
+                <Link href='/poslete-zpravu-kamaradum'><Button>Nyní ne</Button></Link>
                 </p>
         </Layout>
     )

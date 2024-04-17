@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/layout'
+import { Button } from '@/form'
 import styles from './index.module.css'
 
 export default function PripomenteMiVolby() {
@@ -29,16 +30,18 @@ export default function PripomenteMiVolby() {
                     Telefon
                     <input type='tel' value={phone} onChange={e => setPhone(e.target.value)}/>
                 </label>
-                <label>
-                    Souhlasím s GDPR
-                    <input type='checkbox'/>
-                </label>
-                <div>
-                    <button onClick={() => {
+                <div className='lastParagraph'>
+                    <label>
+                        Souhlasím s GDPR
+                        <input type='checkbox'/>
+                    </label>
+                </div>
+                <div className='multipleHorizontalButtons'>
+                    <Button onClick={() => {
                         localStorage.setItem('selfie', '1')
                         router.push('/podekovani')
-                    }}>Odeslat</button>
-                    <button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</button>
+                    }}>Odeslat</Button>
+                    <Button onClick={() => router.push('/zustanme-v-kontaktu')}>Teď ne</Button>
                 </div>
             </div>
         </Layout>
