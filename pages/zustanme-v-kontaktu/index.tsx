@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Layout } from '@/layout';
+import { Button } from '@/form';
 import styles from './index.module.css'
 
 export default function ZustanmeVKontaktu() {
@@ -48,13 +49,15 @@ export default function ZustanmeVKontaktu() {
                     PSČ
                     <input type='text'/>
                 </label>
-                <label>
-                    Souhlasím se zasíláním informací
-                    <input type='checkbox'/>
-                </label>
-                <div>
-                    <button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</button>
-                    <button onClick={() => router.push('/darujte')}>Nyní ne</button>
+                <div className='lastParagraph'>
+                    <label>
+                        Souhlasím se zasíláním informací
+                        <input type='checkbox'/>
+                    </label>
+                </div>
+                <div className='multipleHorizontalButtons'>
+                    <Button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</Button>
+                    <Button onClick={() => router.push('/darujte')}>Nyní ne</Button>
                 </div>
             </div>
         </Layout>

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Layout } from '@/layout'
 
@@ -10,7 +9,7 @@ export default function PodekovaniNaKonec() {
         const selfie = parseInt(localStorage.getItem('selfie') ?? '1')
         const numberOfMessages = parseInt(localStorage.getItem('messages') ?? '0')
 
-        const score = (shared * 17) + (selfie * 12) + numberOfMessages
+        const score = (shared * 17) + (selfie * 8) + numberOfMessages
         setScore(score)
     }, [])
 

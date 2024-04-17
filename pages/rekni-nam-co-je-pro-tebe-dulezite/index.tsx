@@ -15,7 +15,13 @@ export default function RekniNamCoJeProTebeDulezite() {
     const router = useRouter()
 
     return (
-        <Layout leftBackgroundColor='greenyellow'>
+        <Layout
+            leftbox={{
+                image: '/petr_doubravsky.png',
+                title: 'Petr Doubravský',
+                text: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+            }}
+        >
             <>
                 <h1>Řekni nám co je pro tebe důležité</h1>
                 <ul>

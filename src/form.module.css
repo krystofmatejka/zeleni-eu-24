@@ -1,0 +1,20 @@
+.button {
+    border-radius: 2rem;
+    background: #60b34d;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 0;
+
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.3;
+    transition: all .2s ease-in-out;
+
+    touch-action: manipulation;
+}
+
+.button:hover {
+    background: #4d903d;
+}
