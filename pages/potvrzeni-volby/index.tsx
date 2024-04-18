@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import { Layout } from '@/layout';
 import { Button } from '@/form';
+import { Content } from '@/content';
 
 export default function PotvrzeniVolby() {
     const [topic, setTopic] = useState('')
@@ -23,13 +24,12 @@ export default function PotvrzeniVolby() {
                 text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             }}
         >
-            <>
-                <h1>Vaše téma je: {topic}</h1>
-                <p className='lastParagraph'>Nyní pošťouchněte své přátele, aby se také přišli k volbám a hlasovali</p>
-                <p>
-                    <Link href='/sdileni-na-facebooku'><Button>Další</Button></Link>
-                </p>
-            </>
+            <Content
+                title={`Vaše téma je: ${topic}`}
+                buttons={<Link href='/sdileni-na-facebooku'><Button>Další</Button></Link>}
+            >
+                Nyní pošťouchněte své přátele, aby se také přišli k volbám a hlasovali
+            </Content>
         </Layout>
     )
 }

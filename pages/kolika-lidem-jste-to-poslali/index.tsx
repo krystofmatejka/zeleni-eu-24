@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/layout';
 import { Button } from '@/form';
+import { Content } from '@/content';
 
 function handleChangeValue(newValue: number, callback: Function) {
     const newValueLimit = Math.max(newValue, 0)
@@ -20,16 +21,19 @@ export default function KolikaLidemJsteToPoslali() {
 
     return (
         <Layout>
-            <h1>Kolika lidem jste to poslali?</h1>
-            <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
-            <div className='lastParagraph'>
-                <input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
-                <button style={{width: '50px'}} onClick={() => handleChangeValue(value + 1, setValue)}>+</button>
-                <button style={{width: '50px'}} onClick={() => handleChangeValue(value - 1, setValue)}>-</button>
-            </div>
-            <div>
-                <Link href='/pripomente-mi-volby'><Button>Další krok</Button></Link>
-            </div>
+            <Content
+                title='Kolika lidem jste to poslali?'
+                buttons={
+                    <Link href='/pripomente-mi-volby'><Button>Další krok</Button></Link>
+                }
+            >
+                <div>
+                    <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
+                    <input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
+                    <button style={{width: '50px'}} onClick={() => handleChangeValue(value + 1, setValue)}>+</button>
+                    <button style={{width: '50px'}} onClick={() => handleChangeValue(value - 1, setValue)}>-</button>
+                </div>
+            </Content>
         </Layout>
     )
 }

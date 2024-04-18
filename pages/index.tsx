@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Layout } from '@/layout';
 import { Button } from '@/form';
-import styles from './index.module.css'
+import { Content } from '@/content';
 
 const SECONDS_IN_DAY = 86400
 const ELECTION_DATE = '2024-06-07T00:00:00.000'
@@ -20,12 +20,14 @@ export default function Index() {
                 text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             }}
         >
-            <>
-                <h1>Do voleb zbývá {title}</h1>
-                <Link href="/rekni-nam-co-je-pro-tebe-dulezite">
-                    <Button>Jdeme na to</Button>
-                </Link>
-            </>
+            <Content
+                title={`Do voleb zbývá ${title}`}
+                buttons={
+                    <Link href="/rekni-nam-co-je-pro-tebe-dulezite">
+                        <Button>Jdeme na to</Button>
+                    </Link>
+                }
+            />
         </Layout>
     )
 }

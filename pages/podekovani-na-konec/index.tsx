@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Layout } from '@/layout'
+import { Content } from '@/content'
 
 export default function PodekovaniNaKonec() {
     const [score, setScore] = useState<number | undefined>()
@@ -19,10 +20,11 @@ export default function PodekovaniNaKonec() {
 
     return (
         <Layout>
-            <h1>Děkujeme</h1>
-            <p>
-                Vaše aktivita mohla oslovit {score} potencionálních voličů.
-            </p>
+            <Content
+                title='Děkujeme'
+            >
+                {score !== undefined && `Vaše aktivita mohla oslovit ${score} potencionálních voličů.`}
+            </Content>
         </Layout>
     )
 }

@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import { Layout } from '@/layout'
 import { Button } from '@/form'
+import { Content } from '@/content'
 
 export default function DikyBudemeVKontaktu() {
     return (
         <Layout>
-            <h1>Díky, budeme v kontaktu</h1>
-            <p>
-                <Link href='/darujte'><Button>Jdeme dál</Button></Link>
-            </p>
+            <Content
+                title='Díky, budeme v kontaktu'
+                buttons={<Link href='/darujte'><Button>Jdeme dál</Button></Link>}
+            />
         </Layout>
     )
 }

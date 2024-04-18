@@ -1,14 +1,17 @@
 import Link from 'next/link'
 import { Layout } from '@/layout'
 import { Button } from '@/form'
+import { Content } from '@/content'
 
 export default function PodekovaniZaSdileni() {
     return (
         <Layout>
-            <h1>Děkujeme za sdílení</h1>
-            <p>
-                <Link href='/poslete-zpravu-kamaradum'><Button>Další krok</Button></Link>
-            </p>
+            <Content
+                title='Děkujeme za sdílení'
+                buttons={
+                    <Link href='/poslete-zpravu-kamaradum'><Button>Další krok</Button></Link>
+                }
+            />
         </Layout>
     )
 }
