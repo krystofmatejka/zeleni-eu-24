@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/layout';
-import { Button } from '@/form';
+import { Button, Input } from '@/form';
 import { Content } from '@/content';
+import styles from './index.module.css'
 
 function handleChangeValue(newValue: number, callback: Function) {
     const newValueLimit = Math.max(newValue, 0)
@@ -29,9 +30,11 @@ export default function KolikaLidemJsteToPoslali() {
             >
                 <div>
                     <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
-                    <input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
-                    <button style={{width: '50px'}} onClick={() => handleChangeValue(value + 1, setValue)}>+</button>
-                    <button style={{width: '50px'}} onClick={() => handleChangeValue(value - 1, setValue)}>-</button>
+                    <div className={styles.form}>
+                        <Input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
+                        <Button onClick={() => handleChangeValue(value + 1, setValue)}>+</Button>
+                        <Button onClick={() => handleChangeValue(value - 1, setValue)}>-</Button>
+                    </div>
                 </div>
             </Content>
         </Layout>

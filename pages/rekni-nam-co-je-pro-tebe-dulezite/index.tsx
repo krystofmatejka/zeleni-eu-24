@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation'
 import { Layout } from '@/layout';
 import { Content } from '@/content';
+import styles from './styles.module.css'
 
 function saveTopic(topic: string, callback: Function) {
     localStorage.setItem('topic', topic);
@@ -24,11 +25,11 @@ export default function RekniNamCoJeProTebeDulezite() {
             <Content
                 title='Řekni nám co je pro tebe důležité'
             >
-                <ul>
+                <ul className={styles.list}>
                     {topics.map((topic, i) => <li
                         key={i}
                         onClick={() => saveTopic(topic, () => router.push('/potvrzeni-volby'))}
-                    ><button>{topic}</button></li>)}
+                    >{topic}</li>)}
                 </ul>
             </Content>
         </Layout>

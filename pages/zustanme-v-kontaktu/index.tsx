@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Layout } from '@/layout';
-import { Button } from '@/form';
+import { Button, Input } from '@/form';
 import { Content } from '@/content';
 import styles from './index.module.css'
 
@@ -39,24 +39,19 @@ export default function ZustanmeVKontaktu() {
             >
                 <div className={styles.container}>
                     <label>
-                        Jméno
-                        <input type='text'/>
+                        <Input type='text' placeholder='Jméno'/>
                     </label>
                     <label>
-                        Příjmení
-                        <input type='text'/>
+                        <Input type='text' placeholder='Příjmení'/>
                     </label>
                     <label>
-                        Email
-                        <input type='email' value={email} onChange={e => setEmail(e.target.value)}/>
+                        <Input type='email' placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}/>
                     </label>
                     <label>
-                        Telefon
-                        <input type='tel' value={phone} onChange={e => setPhone(e.target.value)}/>
+                        <Input type='tel' placeholder='Telefon' value={phone} onChange={e => setPhone(e.target.value)}/>
                     </label>
                     <label>
-                        PSČ
-                        <input type='text'/>
+                        <Input type='text' placeholder='PSČ'/>
                     </label>
                     <label>
                         Souhlasím se zasíláním informací

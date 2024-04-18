@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/layout'
-import { Button } from '@/form'
+import { Button, Input } from '@/form'
 import { Content } from '@/content'
 import styles from './index.module.css'
 
@@ -35,12 +35,10 @@ export default function PripomenteMiVolby() {
                 <p>V den volby postněne volební selfie</p>
                 <div className={styles.container}>
                     <label>
-                        E-mail
-                        <input type='email' value={email} onChange={e => setEmail(e.target.value)}/>
+                        <Input type='email' placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}/>
                     </label>
                     <label>
-                        Telefon
-                        <input type='tel' value={phone} onChange={e => setPhone(e.target.value)}/>
+                        <Input type='tel' placeholder='Telefon' value={phone} onChange={e => setPhone(e.target.value)}/>
                     </label>
                     <label>
                         Souhlasím s GDPR
