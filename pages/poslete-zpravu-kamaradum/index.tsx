@@ -1,15 +1,17 @@
 import Link from 'next/link'
 import { Layout } from '@/layout'
 import { Button } from '@/form'
+import { Content } from '@/content'
 
 export default function PosleteZpravuKamaradum() {
     return (
         <Layout>
-            <h1>Pošlete zprávu kamarádům</h1>
-            <p className='lastParagraph'>Sdílejte skrze messenger, whatsapp, signal, ...</p>
-            <p>
-                <Link href='/kolika-lidem-jste-to-poslali'><Button>Mám hotovo</Button></Link>
-            </p>
+            <Content
+                title='Pošlete zprávu kamarádům'
+                buttons={<Link href='/kolika-lidem-jste-to-poslali'><Button>Mám hotovo</Button></Link>}
+            >
+                Sdílejte skrze messenger, whatsapp, signal, ...
+            </Content>
         </Layout>
     )
 }

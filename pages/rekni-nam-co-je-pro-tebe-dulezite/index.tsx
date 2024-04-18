@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import styles from "./styles.module.css";
 import { Layout } from '@/layout';
+import { Content } from '@/content';
+import styles from './styles.module.css'
 
 function saveTopic(topic: string, callback: Function) {
     localStorage.setItem('topic', topic);
@@ -22,15 +22,16 @@ export default function RekniNamCoJeProTebeDulezite() {
                 text: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
             }}
         >
-            <>
-                <h1>Řekni nám co je pro tebe důležité</h1>
-                <ul>
+            <Content
+                title='Řekni nám co je pro tebe důležité'
+            >
+                <ul className={styles.list}>
                     {topics.map((topic, i) => <li
                         key={i}
                         onClick={() => saveTopic(topic, () => router.push('/potvrzeni-volby'))}
-                    ><button>{topic}</button></li>)}
+                    >{topic}</li>)}
                 </ul>
-            </>
+            </Content>
         </Layout>
     )
 }
