@@ -31,7 +31,7 @@ export default function KolikaLidemJsteToPoslali() {
                 <div>
                     <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
                     <div className={styles.form}>
-                        <Input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} />
+                        <Input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} style={{width: '100px'}} />
                         <Button onClick={() => handleChangeValue(value + 1, setValue)}>+</Button>
                         <Button onClick={() => handleChangeValue(value - 1, setValue)}>-</Button>
                     </div>
