@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/layout'
-import { Button, Input } from '@/form'
+import { Button, Input, Checkbox } from '@/form'
 import { Content } from '@/content'
 import styles from './index.module.css'
 
@@ -40,9 +40,9 @@ export default function PripomenteMiVolby() {
                     <label>
                         <Input type='tel' placeholder='Telefon' value={phone} onChange={e => setPhone(e.target.value)}/>
                     </label>
-                    <label>
+                    <label className={styles.gdpr}>
                         Souhlasím s GDPR
-                        <input type='checkbox'/>
+                        <Checkbox/>
                     </label>
                 </div>
             </Content>

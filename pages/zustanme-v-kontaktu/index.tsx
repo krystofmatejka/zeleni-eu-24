@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Layout } from '@/layout';
-import { Button, Input } from '@/form';
+import { Button, Input, Checkbox } from '@/form';
 import { Content } from '@/content';
 import styles from './index.module.css'
 
@@ -53,9 +53,9 @@ export default function ZustanmeVKontaktu() {
                     <label>
                         <Input type='text' placeholder='PSČ'/>
                     </label>
-                    <label>
+                    <label className={styles.contact}>
                         Souhlasím se zasíláním informací
-                        <input type='checkbox'/>
+                        <Checkbox/>
                     </label>
                 </div>
             </Content>
