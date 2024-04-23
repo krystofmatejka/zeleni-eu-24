@@ -87,11 +87,11 @@ body, #__next {
   padding: 0;
   height:100%;
   font-family: var(--font-lato);
+  background-color: #029E4A;
 }
 
 #__next {
   overflow-y: hidden;
-  background-color: #029E4A;
 }
 
 body {

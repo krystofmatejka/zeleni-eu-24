@@ -4,6 +4,13 @@
     display: flex;
 }
 
+@media (min-width: 1250px) {
+    .container {
+        width: 1250px;
+        margin: 0 auto;
+    }
+}
+
 .portrait {
     width: 150px;
     height: 150px;
@@ -15,26 +22,41 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.leftBox {
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+@media (min-width: 679px) {
+    .leftBox {
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    color: #ddd;
+        color: #ddd;
+    }
+
+    .leftBox > h2 {
+        margin: 10px 0 5px 0;
+    }
+
+    .rightBox {
+        width: 50%;
+    }
 }
 
-.leftBox > h2 {
-    margin: 10px 0 5px 0;
+@media (max-width: 680px) {
+    .leftBox {
+        display: none;
+    }
+
+    .rightBox {
+        width: 100%;
+    }
 }
 
 .rightBox {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
