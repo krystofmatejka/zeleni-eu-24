@@ -65,7 +65,18 @@
     text-align: center;
 
     background: #fff;
-    margin: 15px;
     padding: 10px 15px 15px 15px;
     border-radius: 10px;
+}
+
+@media (max-width: 305px) {
+    .rightBox {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 306px) {
+    .rightBox {
+        margin: 15px;
+    }
 }

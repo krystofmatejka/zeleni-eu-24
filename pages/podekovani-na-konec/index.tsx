@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Confetti from 'react-confetti'
 import { Layout } from '@/layout'
 import { Content } from '@/content'
 
@@ -24,6 +25,7 @@ export default function PodekovaniNaKonec() {
                 title='Děkujeme'
             >
                 {score !== undefined && `Vaše aktivita mohla oslovit ${score} potencionálních voličů.`}
+                {score > 0 && <Confetti recycle={false} tweenDuration={5000} gravity={0.2} numberOfPieces={300}/>}
             </Content>
         </Layout>
     )
