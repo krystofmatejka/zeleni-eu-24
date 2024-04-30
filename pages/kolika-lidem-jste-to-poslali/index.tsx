@@ -23,13 +23,13 @@ export default function KolikaLidemJsteToPoslali() {
     return (
         <Layout>
             <Content
-                title='Kolika lidem jste to poslali?'
+                title='Dobrá práce! Můžete nám prozradit, kolika lidem jste zprávu poslali?'
                 buttons={
                     <Link href='/pripomente-mi-volby'><Button>Další krok</Button></Link>
                 }
             >
                 <div>
-                    <p>Děkujeme za sdílení. Sdělte nám, kolika lidem jste to poslali?</p>
+                    <p>Ze sociologických výzkumů víme, že na volební účast má největší vliv osobní vzkaz a doporučení. Každý váš vzkaz je tedy potenciálně jeden nový hlas ve volbách do Evropského parlamentu.</p>
                     <div className={styles.form}>
                         <Input type='number' value={value} onChange={(e) => handleChangeValue(parseInt(e.target.value), setValue)} style={{width: '100px'}} />
                         <Button onClick={() => handleChangeValue(value + 1, setValue)}>+</Button>

@@ -29,7 +29,7 @@ export default function ZustanmeVKontaktu() {
     return (
         <Layout>
             <Content
-                title='Zůstaňme v kontaktu'
+                title='Zůstaňme v kontaktu!'
                 buttons={
                     <>
                         <Button onClick={() => router.push('/diky-budeme-v-kontaktu')}>OK</Button>
@@ -37,6 +37,9 @@ export default function ZustanmeVKontaktu() {
                     </>
                 }
             >
+                <p>Jako Zelení kampaňujeme po celé Evropě - našim cílem je mít po volbách 75 zelených europoslanců a europoslankyň, abychom mohli měnit Evropu i Česko k lepšímu. Politici současné generace, kteří nerozumí dnešní době, se ale nevzdají snadno.</p>
+                <p>Za námi ale stojí tisíce lidí jako jste vy: lidé kterém není lhostejná ochrana klimatu a přírody, modernizace ekonomiky, lidská práva a svobody nebo ochrana bezpečí a demokracie.</p>
+                <p>S těmito lidmi jsme čas od času v kontaktu prostřednictvím e-mailu. Můžeme napsat občas i vám, abychom vám dali vědět, když nastane nějaký zásadní moment kampaně nebo budeme potřebovat vaši podporu? Z odběru se můžete kdykoli odhlásit.</p>
                 <div className={styles.container}>
                     <label>
                         <Input type='text' placeholder='Jméno'/>
@@ -54,7 +57,7 @@ export default function ZustanmeVKontaktu() {
                         <Input type='text' placeholder='PSČ'/>
                     </label>
                     <label className={styles.contact}>
-                        Souhlasím se zasíláním informací
+                        Souhlasím se zasílání informací
                         <Checkbox/>
                     </label>
                 </div>

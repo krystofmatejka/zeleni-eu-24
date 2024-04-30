@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Layout } from '@/layout';
 import { Button } from '@/form';
 import { Content } from '@/content';
+import styles from './styles.module.css'
 
 export default function PotvrzeniVolby() {
     const [topic, setTopic] = useState('')
@@ -25,10 +26,22 @@ export default function PotvrzeniVolby() {
             }}
         >
             <Content
-                title={`Vaše téma je: ${topic}`}
+                title={`Potvrzení volby`}
                 buttons={<Link href='/sdileni-na-facebooku'><Button>Další</Button></Link>}
             >
-                Nyní pošťouchněte své přátele, aby se také přišli k volbám a hlasovali
+                {topic === 'Modernizace ekonomiky pro vyšší kvalitu života' && (
+                    <p className={styles.p}>Můžeme vám slíbit, že uděláme všechno pro to, abychom pomohli modernizovat naši ekonomiku a pomohli tak vyšší kvalitě života. Protože na kvalitě života všech nám záleží.</p>
+                )}
+                {topic === 'Odpovědnost k přírodě a klimatu' && (
+                    <p className={styles.p}>Můžeme vám slíbit, že odpovědnost k ochraně přírody a klimatu pro nás bude vždycky nejdůležitější součástí všeho, co v politice prosazujeme. Protože naši planetu máme jen jednu.</p>
+                )}
+                {topic === 'Lidská práva a svobody' && (
+                    <p className={styles.p}>Můžeme vám slíbit, že za lidská práva a svobody, rovnoprávnost a solidaritu s druhými se vždycky postavíme. Je to jedna z našich nejdůležitějších hodnot a jsme rádi, že ji sdílíme s vámi.</p>
+                )}
+                {topic === 'Ochrana bezpečí a demokracie' && (
+                    <p className={styles.p}>Demokracie i naše bezpečí jsou pod hrozbou autoritářů nebo války na Ukrajině. Můžeme vám slíbit, že to nikdy nebudeme brát na lehkou váhu.</p>
+                )}
+                <p>Teď pojďme oslovit několik vašich přátel či rodinných příslušníků, abychom je dostali k volbám a doporučili jim Johannu Nejedlovou a Zelené.</p>
             </Content>
         </Layout>
     )

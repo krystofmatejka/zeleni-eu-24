@@ -22,9 +22,10 @@ export default function PodekovaniNaKonec() {
     return (
         <Layout>
             <Content
-                title='Děkujeme'
+                title='Děkujeme, jste u konce'
             >
-                {score !== undefined && `Vaše aktivita mohla oslovit ${score} potencionálních voličů.`}
+                {score !== undefined && <p>{`Jednotlivé kroky, kterými jste nám na tomto webu pomohli, mohou ve volbách ovlivnit přibližně ${score} lidí.`}</p>}
+                <p>Moc vám za to děkujeme. A pokud se o nás chcete dozvědět víc, na našem webu <a href='https://volby.zeleni.cz' target='_blank'>volby.zeleni.cz</a> najdete více informací o tom, jak chceme zlepšit Evropu i Česko k lepšímu. </p>
                 {score > 0 && <Confetti recycle={false} tweenDuration={5000} gravity={0.2} numberOfPieces={300}/>}
             </Content>
         </Layout>
