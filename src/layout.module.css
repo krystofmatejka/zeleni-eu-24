@@ -4,9 +4,9 @@
     display: flex;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1600px) {
     .container {
-        width: 1250px;
+        width: 1600px;
         margin: 0 auto;
     }
 }
@@ -65,7 +65,7 @@
     text-align: center;
 
     background: #fff;
-    padding: 10px 15px 15px 15px;
+    padding: 20px;
     border-radius: 10px;
 }
 

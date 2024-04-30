@@ -28,7 +28,7 @@ export default function SdileniNaFacebooku() {
             }}
         >
             <Content
-                title='Sdílení na facebooku'
+                title='Sdílejte na Facebooku, proč je vaší volbou Johanna Nejedlová a Zelení!'
                 buttons={
                     <>
                         <a
@@ -41,7 +41,14 @@ export default function SdileniNaFacebooku() {
                         <Link href='/poslete-zpravu-kamaradum'><Button>Nyní ne</Button></Link>
                     </>
                 }
-            />
+            >
+                <p>
+                    Vaše volba má sílu inspirovat! Studie ukazují, že pokud přátelům ukážete, že půjdete k volbám a koho budete volit, může mít velký efekt. A to i v době několik týdnů před volbami. Sdílení může ovlivnit až 5&nbsp;% vašich facebookových přátel.
+                </p>
+                <p>
+                    Vaše příspěvky mohou inspirovat další, aby se také zapojili a podpořili změnu. Nebojte se být vidět a sdílet, proč stojíte za Johannou Nejedlovou a Zelenými!
+                </p>
+            </Content>
         </Layout>
     )
 }
