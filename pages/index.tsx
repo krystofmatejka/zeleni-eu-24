@@ -7,11 +7,30 @@ import styles from './index.module.css'
 const SECONDS_IN_DAY = 86400
 const ELECTION_DATE = '2024-06-07T00:00:00.000'
 
+function createRemainsLabel(numberOfWeeks: number, label1: string, label2: string, label3: string): string {
+    if (numberOfWeeks >= 5) {
+        return `zbývá ${numberOfWeeks} ${label1}`
+    }
+    if (numberOfWeeks >= 2) {
+        return `zbývají ${numberOfWeeks} ${label2}`
+    }
+    if (numberOfWeeks >= 1) {
+        return `zbývá ${numberOfWeeks} ${label3}`
+    }
+    return `zbývá ${numberOfWeeks} ${label1}`
+}
+
+function createDaysTitle(numberOfDays: number) {
+
+}
+
 export default function Index() {
     const secondsToElection = Math.max((new Date(ELECTION_DATE).getTime() - Date.now()) / 1000, 0)
     const numberOfDaysToElection = Math.ceil(secondsToElection / SECONDS_IN_DAY)
     const numberOfWeeksToElection = Math.floor(numberOfDaysToElection / 7)
-    const title = numberOfWeeksToElection >= 2 ? `${numberOfWeeksToElection} týdnů` : `${numberOfDaysToElection} dnů`
+    const title = numberOfWeeksToElection >= 2 ?
+        createRemainsLabel(numberOfWeeksToElection, 'týdnů', 'týdny', 'týden') :
+        createRemainsLabel(numberOfDaysToElection, 'dnů', 'dny', 'den')
 
     return (
         <Layout
@@ -22,7 +41,7 @@ export default function Index() {
             }}
         >
             <Content
-                title={`Do voleb zbývá ${title}`}
+                title={`Do voleb ${title}`}
                 buttons={
                     <Link href="/rekni-nam-co-je-pro-tebe-dulezite">
                         <Button>Jdeme na to</Button>
