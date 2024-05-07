@@ -22,7 +22,7 @@ export default function Podekovani() {
                 title='Výborně!'
                 buttons={<Link href='/zustanme-v-kontaktu'><Button>Další krok</Button></Link>}
             >
-                {topic === 'Modernizace ekonomiky pro vyšší kvalitu života' && (
+                {topic === 'Modernizace ekonomiky' && (
                     <p>To je dalších 10 až 20 hlasů pro modernizaci ekonomiky a vyšší kvalitu života.</p>
                 )}
                 {topic === 'Odpovědnost k přírodě a klimatu' && (

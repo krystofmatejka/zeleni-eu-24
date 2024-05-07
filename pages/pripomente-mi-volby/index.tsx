@@ -33,7 +33,7 @@ export default function PripomenteMiVolby() {
                 }
             >
                 <p>Skvělé! Další krok je úplně snadný. Pokud v den voleb zveřejníte selfie, jak jdete volit, můžete výrazně ovlivnit volební účast vašich přátel. Stačí jednoduchý snímek - má to prokazatelně velký vliv na volební účast.</p>
-                <p>Můžeme vám to připomenout? Zanechte nám svou e-mailovou adresu a my vám v den voleb pošleme přátelskou připomínku. Slibujeme, že vás nebudeme obtěžovat spamem ani ničím jiným.</p>
+                <p>Můžeme vám to připomenout? Zanechte nám na sebe kontakt a my vám v den voleb pošleme přátelskou připomínku. Slibujeme, že vás nebudeme obtěžovat spamem ani ničím jiným.</p>
                 <div className={styles.container}>
                     <label>
                         <Input type='email' placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}/>
@@ -42,7 +42,7 @@ export default function PripomenteMiVolby() {
                         <Input type='tel' placeholder='Telefon' value={phone} onChange={e => setPhone(e.target.value)}/>
                     </label>
                     <label className={styles.gdpr}>
-                        Souhlasím s uchováním emailu pro připomenutí voleb.
+                        Souhlasím s uchováním dat připomenutí voleb
                         <Checkbox/>
                     </label>
                 </div>

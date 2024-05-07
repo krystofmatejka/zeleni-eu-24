@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { Layout } from '@/layout'
 import { Button } from '@/form'
 import { Content } from '@/content'
+import styles from './styles.module.css'
 
 export default function Darujte() {
     const router = useRouter()
@@ -12,11 +13,13 @@ export default function Darujte() {
             <Content
                 title='Darujte'
                 buttons={
-                    <>
-                        <a href='https://dary.zeleni.cz/eurovolby?utm_campaign=eurovolby&utm_medim=web&utm_source=tvojevolba' target='_blank' onClick={() => router.push('/podekovani-na-konec')}><Button>Darovat převodem</Button></a>
-                        <a href='https://cause.lundadonate.org/stranazelenychdemo/supportzeleni' target='_blank' onClick={() => router.push('/podekovani-na-konec')}><Button>Darovat kartou</Button></a>
-                        <Link href='/podekovani-na-konec'><Button>Nyní ne</Button></Link>
-                    </>
+                    <div>
+                        <div className={styles.buttons}>
+                            <a href='https://dary.zeleni.cz/eurovolby?utm_campaign=eurovolby&utm_medim=web&utm_source=tvojevolba' target='_blank' onClick={() => router.push('/podekovani-na-konec')}><Button>Darovat převodem</Button></a>
+                            <a href='https://cause.lundadonate.org/stranazelenychdemo/supportzeleni' target='_blank' onClick={() => router.push('/podekovani-na-konec')}><Button>Darovat kartou</Button></a>
+                        </div>
+                        <Link href='/podekovani-na-konec'>Nyní ne</Link>
+                    </div>
                 }
             >
                 <p>Už jste toho udělali hodně, ale stojíme proti lobbistům a politikům s obrovskými rozpočty, a abychom proti nim vyhráli, spoléháme na dary lidí jste vy. Můžete si dovolit nám přispět na kampaň?</p>

@@ -29,6 +29,7 @@ export default function Document() {
         <script dangerouslySetInnerHTML={{__html: pixel }}/>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG2QVEY7PC"/>
         <script dangerouslySetInnerHTML={{__html: gTag}}/>
+        <title>Tvoje volba</title>
       </Head>
       <body>
         <Main />
