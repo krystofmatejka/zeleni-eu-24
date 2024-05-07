@@ -57,7 +57,7 @@ export default function ZustanmeVKontaktu() {
                         <Input type='text' placeholder='PSČ'/>
                     </label>
                     <label className={styles.contact}>
-                        Souhlasím se zasílání informací
+                        Souhlasím se zasíláním informací
                         <Checkbox/>
                     </label>
                 </div>

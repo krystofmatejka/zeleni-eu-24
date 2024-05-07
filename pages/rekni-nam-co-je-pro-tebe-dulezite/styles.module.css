@@ -1,9 +1,22 @@
 .p {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
 }
 
 .list {
     list-style: none;
+    margin: auto;
+}
+
+@media (min-width: 679px) {
+    .list {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 680px) {
+    .list {
+        max-width: 100%;
+    }
 }
 
 .list > li {
@@ -13,4 +26,8 @@
 
 .list > li:hover {
     text-decoration: underline;
+}
+
+.list button {
+    width: 100%;
 }

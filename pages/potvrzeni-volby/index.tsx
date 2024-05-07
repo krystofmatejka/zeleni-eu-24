@@ -26,10 +26,10 @@ export default function PotvrzeniVolby() {
             }}
         >
             <Content
-                title={`Potvrzení volby`}
+                title={`Děkujeme`}
                 buttons={<Link href='/sdileni-na-facebooku'><Button>Další</Button></Link>}
             >
-                {topic === 'Modernizace ekonomiky pro vyšší kvalitu života' && (
+                {topic === 'Modernizace ekonomiky' && (
                     <p className={styles.p}>Můžeme vám slíbit, že uděláme všechno pro to, abychom pomohli modernizovat naši ekonomiku a pomohli tak vyšší kvalitě života. Protože na kvalitě života všech nám záleží.</p>
                 )}
                 {topic === 'Odpovědnost k přírodě a klimatu' && (
