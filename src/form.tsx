@@ -21,8 +21,8 @@ export const Input = ({ ...rest}: InputProps) => {
     )
 }
 
-export const Button = ({ children, ...rest}: ButtonProps) => {
+export const Button = ({ children, type, ...rest}: ButtonProps) => {
     return (
-        <button {...rest} type='button' className={styles.button}>{children}</button>
+        <button {...rest} type={type ?? 'button'} className={styles.button}>{children}</button>
     )
 }
