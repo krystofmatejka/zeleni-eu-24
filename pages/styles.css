@@ -112,3 +112,20 @@ h1 {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
+
+.leftPanel {
+  align-items: center;
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 680px) {
+  .leftPanel {
+      display: none;
+  }
+}

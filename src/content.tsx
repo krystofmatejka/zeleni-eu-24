@@ -9,7 +9,7 @@ type Props = {
 export const Content = ({ title, children, buttons }: Props) => {
     return (
         <>
-            <h1>{title}</h1>
+            <h2 className={styles.title}>{title}</h2>
             {children &&
                 <div className={styles.children}>{children}</div>
             }

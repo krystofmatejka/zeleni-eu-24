@@ -16,9 +16,6 @@ export const Layout = ({ leftbox, children }: Props) => {
         <div className={styles.container}>
             {leftbox ? (
                 <div className={styles.leftBox}>
-                    <div className={styles.portrait} style={{backgroundImage: `url('${leftbox.image}')`}}/>
-                    <h2>{leftbox.title}</h2>
-                    <p>{leftbox.text}</p>
                 </div>
             ) : (
                 <div className={styles.leftBox}/>
