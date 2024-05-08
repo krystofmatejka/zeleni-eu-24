@@ -31,7 +31,7 @@ export default function Index() {
     return (
         <Layout
             leftbox={{
-                image: '/johanna_nejedlova.png',
+                image: '/johana.png',
                 title: 'Johana Nejedlová',
                 text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             }}

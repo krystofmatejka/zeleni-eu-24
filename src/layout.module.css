@@ -17,7 +17,6 @@
     background-image: url(/johanna_nejedlova.png);
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
 
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
@@ -40,6 +39,7 @@
 
     .leftBox > h2 {
         margin: 10px 0 5px 0;
+        text-transform: uppercase;
     }
 
     .rightBox {
