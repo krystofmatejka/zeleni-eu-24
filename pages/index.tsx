@@ -37,6 +37,7 @@ export default function Index() {
             }}
         >
             <Content
+                showMobileTitle={true}
                 title={`Do voleb ${title}`}
                 buttons={
                     <Link href="/rekni-nam-co-je-pro-tebe-dulezite">
