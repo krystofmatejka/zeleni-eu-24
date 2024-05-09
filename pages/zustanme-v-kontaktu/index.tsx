@@ -79,7 +79,7 @@ export default function ZustanmeVKontaktu() {
                             <Input type='email' placeholder='E-mail' name='email' required value={email} onChange={e => setEmail(e.target.value)} />
                         </label>
                         <label>
-                            <Input type='tel' placeholder='Telefon' name='phone' required pattern='(\s|\+|[0-9])+' value={phone} onChange={e => setPhone(e.target.value)} />
+                            <Input type='tel' placeholder='Telefon' name='phone' pattern='(\s|\+|[0-9])+' value={phone} onChange={e => setPhone(e.target.value)} />
                         </label>
                         <label>
                             <Input type='text' placeholder='PSČ' name='zipCode' required pattern='[0-9]{3}\s?[0-9]{2}' value={zipCode} onChange={e => setZipCode(e.target.value)}/>
