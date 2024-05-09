@@ -52,7 +52,7 @@ export default function Index() {
                 Pomoci zvolit Johannu do Evropského parlamentu můžete i vy. A to nejen tím, že ji dáte svůj hlas. Každý z nás má přátele či rodinu. A ty můžete svým osobním doporučením ovlivnit. 
                 </p>
                 <p className={styles.p}>
-                Společenské výzkumy ukazují, že pokud uděláte několik jednoduchých kroků, o kterých se na tomto webu dočtete, můžete přidat Zeleným i několik desítek hlasů. A zrovna ty mohou bát rozhodující. 
+                Společenské výzkumy ukazují, že pokud uděláte několik jednoduchých kroků, o kterých se na tomto webu dočtete, můžete přidat Zeleným i několik desítek hlasů. A zrovna ty mohou být rozhodující. 
                 </p>
             </Content>
         </Layout>

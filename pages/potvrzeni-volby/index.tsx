@@ -27,7 +27,7 @@ export default function PotvrzeniVolby() {
         >
             <Content
                 title={`Děkujeme`}
-                buttons={<Link href='/sdileni-na-facebooku'><Button>Další</Button></Link>}
+                buttons={<Link href='/sdileni-na-facebooku'><Button>Jdeme na to</Button></Link>}
             >
                 {topic === 'Modernizace ekonomiky' && (
                     <p className={styles.p}>Můžeme vám slíbit, že uděláme všechno pro to, abychom pomohli modernizovat naši ekonomiku a pomohli tak vyšší kvalitě života. Protože na kvalitě života všech nám záleží.</p>
@@ -41,7 +41,7 @@ export default function PotvrzeniVolby() {
                 {topic === 'Ochrana bezpečí a demokracie' && (
                     <p className={styles.p}>Demokracie i naše bezpečí jsou pod hrozbou autoritářů nebo války na Ukrajině. Můžeme vám slíbit, že to nikdy nebudeme brát na lehkou váhu.</p>
                 )}
-                <p>Teď pojďme oslovit několik vašich přátel či rodinných příslušníků, abychom je dostali k volbám a doporučili jim Johannu Nejedlovou a Zelené.</p>
+                <p>Teď pojďme oslovit několik vašich přátel či rodinných příslušníků, abychom je dostali k volbám a doporučili jim Johannu Nejedlovou a Zelené. Jak na to se dozvíte hned na další stránce.</p>
             </Content>
         </Layout>
     )
