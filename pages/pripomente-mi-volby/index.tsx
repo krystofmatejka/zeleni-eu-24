@@ -32,7 +32,10 @@ export default function PripomenteMiVolby() {
                                 "phone_numbers": [{ "number": phone }] },
                                 "triggers": { "autoresponse": { "enabled": true } },
                                 "add_tags": ["tvojevolba_pripomenout"]
-                            })
+                        }),
+                        headers: {
+                            'Content-type': 'application/json'
+                        }
                     })
                     localStorage.setItem('selfie', '1')
                     router.push('/podekovani')

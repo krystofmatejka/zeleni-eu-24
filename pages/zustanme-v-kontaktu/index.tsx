@@ -48,7 +48,10 @@ export default function ZustanmeVKontaktu() {
                             "triggers": { "autoresponse": { "enabled": true } },
                             "add_tags": ["tvojevolba_eu"],
                             "custom_fields": ["tvojevolba_tema", "tvojevolba_sdileni", "tvojevolba_zpravy"]
-                        })
+                        }),
+                        headers: {
+                            'Content-type': 'application/json'
+                        }
                     })
 
                     router.push('/diky-budeme-v-kontaktu')
