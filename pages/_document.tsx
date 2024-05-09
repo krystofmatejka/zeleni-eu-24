@@ -32,6 +32,7 @@ export default function Document() {
         <meta property="og:title" content="Jsou Zelení a Johanna Nejedlová tvoje volba? Pomoz jím získat hlasy" />
         <meta property="og:description" content="I ty můžeš získat pro Johannu Nejedlovou několik hlasů navíc a pomoci jí tak do Evropského parlamentu!" />
         <meta property="og:image" content="https://tvojevolba.eu/fb_cover_tvojevolba.png" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <body>
         <div className='leftPanel'>
