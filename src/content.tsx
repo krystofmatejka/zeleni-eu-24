@@ -9,6 +9,10 @@ type Props = {
 export const Content = ({ title, children, buttons }: Props) => {
     return (
         <>
+            <div className={styles.mobileTitle}>
+                <h1>Jsou Zelení tvoje volba?</h1>
+                <p>I ty můžeš získat pro Johannu Nejedlovou několik hlasů navíc a pomoci jí tak do Evropského parlamentu!</p>
+            </div>
             <h2 className={styles.title}>{title}</h2>
             {children &&
                 <div className={styles.children}>{children}</div>
