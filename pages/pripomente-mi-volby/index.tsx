@@ -32,7 +32,10 @@ export default function PripomenteMiVolby() {
                                 "phone_numbers": [{ "number": phone }] },
                                 "triggers": { "autoresponse": { "enabled": true } },
                                 "add_tags": ["tvojevolba_pripomenout"]
-                            })
+                        }),
+                        headers: {
+                            'Content-type': 'application/json'
+                        }
                     })
                     localStorage.setItem('selfie', '1')
                     router.push('/podekovani')
@@ -56,10 +59,10 @@ export default function PripomenteMiVolby() {
                             <Input type='email' placeholder='E-mail' required value={email} onChange={e => setEmail(e.target.value)} />
                         </label>
                         <label>
-                            <Input type='tel' placeholder='Telefon' required pattern='(\s|\+|[0-9])+' value={phone} onChange={e => setPhone(e.target.value)} />
+                            <Input type='tel' placeholder='Telefon' pattern='(\s|\+|[0-9])+' value={phone} onChange={e => setPhone(e.target.value)} />
                         </label>
                         <label className={styles.gdpr}>
-                            Souhlasím s uchováním dat připomenutí voleb
+                            Souhlasím s uchováním dat za účelem připomenutí voleb
                             <Checkbox required />
                         </label>
                     </div>
