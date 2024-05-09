@@ -34,7 +34,7 @@ export default function Podekovani() {
                 {topic === 'Ochrana bezpečí a demokracie' && (
                     <p>To je dalších 10 až 20 hlasů pro ochranu bezpečí a demokracie.</p>
                 )}
-                <p>Hlasovací selfie je silným signálem. Pokud ji zveřejníte například na Instagramu, odhadujeme, že až 10&nbsp;% vašich přátel to ovlivní k účasti ve volbách a hlasování. Pokud máte průměrný počet sledujících (194), znamená to, že přinesete 19 nových hlasů. DĚKUJEME!</p>
+                <p>Hlasovací selfie je silným signálem. Pokud ji zveřejníte například na Instagramu, odhadujeme, že až 10&nbsp;% vašich přátel to ovlivní k účasti ve volbách a hlasování. Pokud máte průměrný počet sledujících (194), znamená to, že přinesete 19 nových hlasů. Nezapomeňte nás v selfie otagovat @zeleni.cz, abychom vás taky mohli sdílet. DĚKUJEME!</p>
             </Content>
         </Layout>
     )
